@@ -1,0 +1,39 @@
+buckets:
+  - name: flussmedia
+  - name: lokmedia
+  - name: lokmedia
+  - name: lokmedia
+  - name: zarr
+  - name: parquet
+  - name: mikromedia
+  - name: lokmedia
+  - name: portmedia
+  - name: mikromedianew
+  - name: zarrnew
+  - name: parquetnew
+users: 
+  - access_key: 1c7fa60b68ba9e082a0001c251da273b
+    name: lok
+    policies:
+      - readwrite
+    secret_key: d29b573f6f6c6fe870508505294f4141
+  - access_key: ccc21242f3d1326adef06f8325704c04
+    name: fluss
+    policies:
+      - readwrite
+    secret_key: aafa7dba621da6e67587c9e14ac4ec3c
+  - access_key: 142402ee01136863cf474dfc392cfc50
+    name: minio
+    policies:
+      - readwrite
+    secret_key: aa154bb70a23ebaba3e2856a0c72dae2
+  - access_key: aa9dc7c9e89684bc9d1b2fa8dccd6789
+    name: port
+    policies:
+      - readwrite
+    secret_key: 8715cd7df19d190cf3104b49197ae872
+  - access_key: d3410dbfab3e87a0e3db0a9f993e3108
+    name: rekuest
+    policies:
+      - readwrite
+    secret_key: 8194317c0bb42f8a9800ae2a482a74c9

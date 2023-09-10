@@ -1,0 +1,36 @@
+db:
+  db_name: fluss_db
+  engine: django.db.backends.postgresql
+  host: db
+  password: a649ca339098a6eeba4dcf39b835d47b
+  port: 5432
+  username: a649ca339098a6eeba4dcf39b835d47b
+django:
+  admin:
+    password: admin
+    username: admin
+  debug: false
+  hosts:
+  - '*'
+  secret_key: 029f7c74eec2a8541481f879a08d58ec
+lok:
+  issuer: lok
+  key_type: RS256
+  public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUnnA1AQ846uES3NzSBmBPAl2cFwDaxDQWrdS+SoX7sogTzinAv024qXUIl3P1MPCNRODhdLv84D85xBnXYwhJsW6AWSrZhiM6t/SvJRn34gEH/RJrXB5p/iq0gQHJ5QGQwN4XaLq6VvTlt7fLkCljv5KVYIZcFyjKK+bMefBqEnRbQDKUm/hefuLVoDgOMiRVu70O5FdmIMiybqppqY6IxibtbZ0eR1h+7Tr3/6uBI46692QmLn7zGdYpX8WkOu/BWWouR+LtLJcz5FyerDymxtLOQhiu2LPaqosV+lUrJ74Ni1G0mocTWnN6ardpSqQXbZDQFMN04H8T80qh1vrv
+minio:
+  access_key: d3410dbfab3e87a0e3db0a9f993e3108
+  buckets:
+   media: flussmedia
+  host: minio
+  port: '9000'
+  protocol: http
+  secret_key: 8194317c0bb42f8a9800ae2a482a74c9
+redis:
+  host: redis
+  port: 6379
+rabbitmq:
+  host: rabbitmq
+  password: guest
+  port: 5672
+  username: guest
+  v_host: ''

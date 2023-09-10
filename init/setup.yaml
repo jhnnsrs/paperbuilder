@@ -1,0 +1,19 @@
+name: sss
+adminUsername: admin
+adminPassword: admin
+groups:
+  - name: jo
+    description: x
+users: 
+  - username: johannes
+    password: johannes
+    groups:
+      - jo
+  - username: karl
+    password: schmarl
+    groups:
+      - jo
+      - flo
+      - fuck
+startPort: 8000
+    

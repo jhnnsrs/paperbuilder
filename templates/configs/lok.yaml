@@ -1,0 +1,212 @@
+activation_days: 7
+apps:
+  - client_id: soinfosienfoisnseghsggegefoisneofinsef
+    client_secret: soinfosienesfseffoisnefoisneofinsef
+    client_type: public
+    grant_type: authorization-code
+    identifier: github.io.jhnnsrs.mikroj
+    name: MikroJ
+    redirect_uris:
+      - http://localhost:8090
+    scopes:
+      - read
+      - write
+    tenant: johannes
+    token: 293j40239j4023023n09nw30d9n203nf03f
+    version: latest
+  - client_id: gdrgdhgnjsdfsefs
+    client_secret: soinfosienesfseff3298zhiub9328ruoisnefoisneofinsef
+    client_type: public
+    grant_type: authorization-code
+    identifier: github.io.jhnnsrs.arkitekt
+    name: Arkitekt Test Client
+    redirect_uris:
+      - http://localhost:5634
+      - http://localhost:5634/callback
+    scopes:
+      - read
+      - write
+    tenant: johannes
+    version: latest
+    token: 293j40239j4023023n09nj09n49nin3w30d9n203nf03f
+  - client_id: snfoinosinefsef
+    client_secret: 9noinfpuisenfpsiuenfpiosenfiusef
+    client_type: public
+    grant_type: authorization-code
+    identifier: github.io.jhnnsrs.orkestrator
+    name: orkestrator
+    redirect_uris:
+      - http://localhost:8090
+      - http://localhost:6789/callback
+      - http://localhost:6789
+      - http://localhost:7890/callback
+      - http://localhost:7890
+      - http://100.91.169.37:7890/callback
+      - http://100.91.169.37:7890
+      - http://10.144.196.141:6789/callback
+      - http://10.144.196.141:6789
+      - http://100.91.169.37:6789
+      - http://100.91.169.37:6789/callback
+      - http://jhnnsrs-server:6789/callback
+      - http://jhnnsrs-server:6789/callback
+    scopes:
+      - read
+      - write
+    tenant: johannes
+    version: latest
+    token: 293j40239j4023023n039j309n309n3093n09nw30d9n203nf03f
+  - client_id: soinfosienfsfosefghsegfisnefoisneofinsef
+    client_secret: soinfoefsefssdfienfoisnefoisneofinsef
+    client_type: public
+    grant_type: authorization-code
+    identifier: github.io.jhnnsrs.doks
+    name: doks
+    redirect_uris:
+      - http://localhost:3000
+      - http://localhost:3000/callback
+      - http://localhost:3000/doks/callback
+    scopes:
+      - read
+      - write
+    tenant: johannes
+    version: latest
+    token: 293j40239j4023023n09nw3oinfinoifnsoifnosineoifnsef0d9n203nf03f
+  - client_id: mylittlefakts
+    client_secret: mylittlefaktssecret
+    client_type: public
+    grant_type: authorization-code
+    identifier: github.io.jhnnsrs.fakts
+    name: fakts
+    redirect_uris:
+      - http://localhost:3456
+      - http://localhost:3456/callback
+    scopes:
+      - read
+      - write
+    tenant: johannes
+    version: latest
+    token: 09j039j4r09n3409in09n09n0909209n409n09n3093n3
+  - client_id: soinfosienfoaswdasdasdisnefoisneofinsef
+    client_secret: soinfosiengeesegegfoisnefoisneofinsef
+    client_type: public
+    grant_type: authorization-code
+    identifier: github.io.jhnnsrs.mikromanager
+    name: MikroManager
+    redirect_uris:
+      - http://localhost:8090
+    scopes:
+      - read
+      - write
+    tenant: johannes
+    version: latest
+    token: 304n03940p39m4f09o304fo9m0394mf039n4f039n4f093n4f
+  - client_id: soinfosienfoissgsegsegtbsynefoisneofinsef
+    client_secret: soinfosienfoissdfsdfnefoisneofinsef
+    client_type: public
+    grant_type: authorization-code
+    identifier: github.io.jhnnsrs.mikro-napari
+    name: napari
+    redirect_uris:
+      - http://localhost:6767/
+      - http://localhost:6767
+    scopes:
+      - read
+      - write
+    tenant: johannes
+    version: latest
+    token: 093j4093n4f09m3094mf09m309mf09mf094n09enf09n23
+  - client_id: sdfsfshrhsdbse4gsrgs4rgdrgsrdgedrg
+    client_secret: ffesefnoweirnw9oinr0wnrosienfoin
+    client_type: public
+    grant_type: authorization-code
+    identifier: github.io.jhnnsrs.mikroj
+    name: mikroj
+    redirect_uris:
+      - http://localhost:6767/
+      - http://localhost:6767
+    scopes:
+      - read
+    tenant: johannes
+    version: v0.0.1
+    token: 0394mr039m4f093m40f90934nf09n309m2039d029n3f092n3f0293fn
+  - client_id: fsefgsdfoina9oiwendaosinaswdaw
+    client_secret: ffesefnoweirnw9fesoienfspieounfspoeinoinr0wnrosienfoin
+    client_type: public
+    grant_type: authorization-code
+    identifier: github.io.jhnnsrs.gucker
+    name: gucker
+    redirect_uris:
+      - http://localhost:6767/
+      - http://localhost:6767
+    scopes:
+      - read
+    tenant: johannes
+    version: latest
+    token: 2039rn0293md02m3f0pm2p30omr02oin3f0ß92m30f9n2039fn2039fn
+  - client_id: 09j09sn09nf0s9ne0f9ns09enf0s9enfsef
+    client_secret: 09049n0ne0fsinme0n309n2039n4029340293m0293m0293f
+    client_type: private
+    grant_type: client-credentials
+    identifier: github.io.jhnnsrs.reaktor
+    name: gucker
+    scopes:
+      - read
+    tenant: johannes
+    version: latest
+    token: sf09js09e0f9se0f9ns0e9nfsef
+
+db:
+  db_name: lok_db
+  engine: django.db.backends.postgresql
+  host: db
+  password: {{postgres_password}}
+  port: 5432
+  username: {{postgres_username}}
+deployment:
+  name: Default
+django:
+  admin:
+    password: {{admin_password}}
+    username: {{admin_username}}
+  debug: false
+  hosts:
+    - "*"
+  secret_key: {{services.lok.django_secret_key}}
+groups: {% for group in groups %}
+  - name: {{ group.name }}
+    description: {{ group.description }}{% endfor %}
+minio:
+  access_key: {{services.lok.access_key}}
+  buckets:
+    media: lokmedia
+  host: minio
+  port: "9000"
+  protocol: http
+  secret_key: {{services.lok.secret_key}}
+private_key:  |
+  {{ private_key|indent(2) }}
+public_key: {{public_key}}
+redis:
+  host: redis
+  port: 6379
+scopes:
+  can_assign: Can Assign Nodes
+  can_create: Can Create Nodes
+  can_create_identifier: Can create new identifier for the platform
+  can_forward_bounce:
+    Can reserve and assign to Nodes mimicking other Users (only
+    backend and admin)
+  can_provide: Can Provide Nodes
+  can_template: Can Template Nodes
+  introspection: Introspect the Token scope
+  provider: Can act as a provider
+  read: Reading all of your Data
+  write: Writing to all of your Data
+  read_starred: Reading all of your shared Data
+token_expire_seconds: 604800
+users: {% for user in users %}
+  - username: {{ user.username }}
+    password: {{ user.password }}
+    groups: {% for group in user.groups %}
+      - {{group}} {% endfor %}{% endfor %}
+

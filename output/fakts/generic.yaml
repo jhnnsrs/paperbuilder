@@ -1,0 +1,44 @@
+self:
+  name: "{{deployment_name}}"
+fluss:
+  base_url: "{{"https" if request.is_secure else "http" }}://{{"fluss" if request.host == "lok" else request.host}}:8040/o"
+  endpoint_url: "{{"https" if request.is_secure else "http" }}://{{"fluss" if request.host == "lok" else request.host}}:8040/graphql"
+  healthz: "{{"https" if request.is_secure else "http" }}://{{"fluss" if request.host == "lok" else request.host}}:8040/ht"
+  secure: false
+  ws_endpoint_url: "{{"wss" if request.is_secure else "ws" }}://{{"fluss" if request.host == "lok" else request.host}}:8040/graphql"
+lok:
+  base_url: "{{"https" if request.is_secure else "http" }}://{{"lok" if request.host == "lok" else request.host}}:{{request.port}}/o"
+  endpoint_url: "{{"https" if request.is_secure else "http" }}://{{"lok" if request.host == "lok" else request.host}}:{{request.port}}/graphql"
+  healthz: "{{"https" if request.is_secure else "http" }}://{{"lok" if request.host == "lok" else request.host}}:{{request.port}}/ht"
+  secure: false
+  ws_endpoint_url: "{{"wss" if request.is_secure else "ws" }}://{{"lok" if request.host == "lok" else request.host}}:{{request.port}}/graphql"
+  client_id: "{{client.client_id}}"
+  client_secret: "{{client.client_secret}}"
+  grant_type: "{{client.authorization_grant_type}}"
+  name: "{{client.name}}"
+  scopes:
+    {% for item in client.scopes %}
+      - {{item}}
+    {% endfor %}
+mikro:
+  base_url: "{{"https" if request.is_secure else "http" }}://{{"mikro" if request.host == "lok" else request.host}}:8020/o"
+  endpoint_url: "{{"https" if request.is_secure else "http" }}://{{"mikro" if request.host == "lok" else request.host}}:8020/graphql"
+  healthz: "{{"https" if request.is_secure else "http" }}://{{"mikro" if request.host == "lok" else request.host}}:8020/ht"
+  secure: false
+  ws_endpoint_url: "{{"wss" if request.is_secure else "ws" }}://{{"mikro" if request.host == "lok" else request.host}}:8020/graphql"
+minio:
+  endpoint_url: "{{"https" if request.is_secure else "http" }}://{{"minio" if request.host == "lok" else request.host}}:8090"
+  secure: false
+port:
+  base_url: "{{"https" if request.is_secure else "http" }}://{{"port" if request.host == "lok" else request.host}}:8030/o"
+  endpoint_url: "{{"https" if request.is_secure else "http" }}://{{"port" if request.host == "lok" else request.host}}:8030/graphql"
+  healthz: "{{"https" if request.is_secure else "http" }}://{{"port" if request.host == "lok" else request.host}}:8030/ht"
+  secure: false
+  ws_endpoint_url: "{{"wss" if request.is_secure else "ws" }}://{{"port" if request.host == "lok" else request.host}}:8030/graphql"
+rekuest:
+  agent:
+    endpoint_url: "{{"wss" if request.is_secure else "ws" }}://{{"rekuest" if request.host == "lok" else request.host}}:8010/agi"
+  endpoint_url: "{{"https" if request.is_secure else "http" }}://{{"rekuest" if request.host == "lok" else request.host}}:8010/graphql"
+  healthz: "{{"https" if request.is_secure else "http" }}://{{"rekuest" if request.host == "lok" else request.host}}:8010/ht"
+  secure: false
+  ws_endpoint_url: "{{"wss" if request.is_secure else "ws" }}://{{"rekuest" if request.host == "lok" else request.host}}:8010/graphql"
