@@ -1,10 +1,10 @@
 db:
-  db_name: fluss_db
+  db_name: rekuest_db
   engine: django.db.backends.postgresql
   host: db
   password: {{postgres_password}}
   port: 5432
-  username: {{postgres_password}}
+  username: {{postgres_user}}
 django:
   admin:
     password: {{admin_password}}
@@ -20,7 +20,7 @@ lok:
 minio:
   access_key: {{services.rekuest.access_key}}
   buckets:
-   media: flussmedia
+   media: rekuestmedia
   host: minio
   port: '9000'
   protocol: http

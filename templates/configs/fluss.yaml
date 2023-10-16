@@ -4,7 +4,7 @@ db:
   host: db
   password: {{postgres_password}}
   port: 5432
-  username: {{postgres_password}}
+  username: {{postgres_user}}
 django:
   admin:
     password: {{admin_password}}
@@ -12,7 +12,7 @@ django:
   debug: false
   hosts:
   - '*'
-  secret_key: {{services.fluss.secret_key}}
+  secret_key: {{services.fluss.django_secret_key}}
 lok:
   issuer: lok
   key_type: RS256

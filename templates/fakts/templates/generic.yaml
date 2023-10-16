@@ -1,0 +1,38 @@
+self:
+  name: "{{ '{{deployment_name}}' }}"
+fluss:
+  endpoint_url: "{{ '{{"https" if request.is_secure else "http" }}://{{"fluss" if request.host == "lok" else request.host + ":' + (start_port + fluss_port_increment)|string + '"}}/graphql' }}"
+  healthz: "{{ '{{"https" if request.is_secure else "http" }}://{{"fluss" if request.host == "lok" else request.host + ":' + (start_port + fluss_port_increment)|string + '"}}/ht' }}"
+  ws_endpoint_url: "{{ '{{"wss" if request.is_secure else "ws" }}://{{"fluss" if request.host == "lok" else request.host + ":' + (start_port + fluss_port_increment)|string + '"}}/graphql' }}"
+lok:
+  base_url: "{{ '{{"https" if request.is_secure else "http" }}://{{"lok" if request.host == "lok" else request.host + ":' + (start_port + lok_port_increment)|string + '"}}/o' }}"
+  userinfo_url: "{{ '{{"https" if request.is_secure else "http" }}://{{"lok" if request.host == "lok" else request.host + ":' + (start_port + lok_port_increment)|string + '"}}/o/userinfo' }}"
+  endpoint_url: "{{ '{{"https" if request.is_secure else "http" }}://{{"lok" if request.host == "lok" else request.host + ":' + (start_port + lok_port_increment)|string + '"}}/graphql' }}"
+  healthz: "{{ '{{"https" if request.is_secure else "http" }}://{{"lok" if request.host == "lok" else request.host + ":' + (start_port + lok_port_increment)|string + '"}}/ht' }}"
+  secure: false
+  ws_endpoint_url: "{{ '{{"wss" if request.is_secure else "ws" }}://{{"lok" if request.host == "lok" else request.host + ":' + (start_port + lok_port_increment)|string + '"}}/graphql' }}"
+  client_id: "{{ '{{client.client_id}}' }}"
+  client_secret: "{{ '{{client.client_secret}}' }}"
+  grant_type: "{{ '{{client.authorization_grant_type}}' }}"
+  name: "{{ '{{client.name}}' }}"
+  scopes:
+    {{ '{% for item in client.scopes %}
+      - {{item}}
+    {% endfor %}'}}
+mikro:
+  endpoint_url: "{{ '{{"https" if request.is_secure else "http" }}://{{"mikro" if request.host == "lok" else request.host + ":' + (start_port + mikro_port_increment)|string + '"}}/graphql' }}"
+  healthz: "{{ '{{"https" if request.is_secure else "http" }}://{{"mikro" if request.host == "lok" else request.host + ":' + (start_port + mikro_port_increment)|string + '"}}/ht' }}"
+  ws_endpoint_url: "{{ '{{"wss" if request.is_secure else "ws" }}://{{"mikro" if request.host == "lok" else request.host + ":' + (start_port + mikro_port_increment)|string + '"}}/graphql' }}"
+minio:
+  endpoint_url: "{{ '{{"https" if request.is_secure else "http" }}://{{"minio:9000" if request.host == "lok" else request.host + ":' + (start_port + minio_port_increment)|string + '"}}' }}"
+  secure: false
+port:
+  endpoint_url: "{{ '{{"https" if request.is_secure else "http" }}://{{"port" if request.host == "lok" else request.host + ":' + (start_port + port_port_increment)|string + '"}}/graphql' }}"
+  healthz: "{{ '{{"https" if request.is_secure else "http" }}://{{"port" if request.host == "lok" else request.host + ":' + (start_port + port_port_increment)|string + '"}}/ht' }}"
+  ws_endpoint_url: "{{ '{{"wss" if request.is_secure else "ws" }}://{{"port" if request.host == "lok" else request.host + ":' + (start_port + port_port_increment)|string + '"}}/graphql' }}"
+rekuest:
+  agent:
+    endpoint_url: "{{ '{{"wss" if request.is_secure else "ws" }}://{{"rekuest" if request.host == "lok" else request.host + ":' + (start_port + rekuest_port_increment)|string + '"}}/agi' }}"
+  endpoint_url: "{{ '{{"https" if request.is_secure else "http" }}://{{"rekuest" if request.host == "lok" else request.host + ":' + (start_port + rekuest_port_increment)|string + '"}}/graphql' }}"
+  healthz: "{{ '{{"https" if request.is_secure else "http" }}://{{"rekuest" if request.host == "lok" else request.host + ":' + (start_port + rekuest_port_increment)|string + '"}}/ht' }}"
+  ws_endpoint_url: "{{ '{{"wss" if request.is_secure else "ws" }}://{{"rekuest" if request.host == "lok" else request.host + ":' + (start_port + rekuest_port_increment)|string + '"}}/graphql' }}"

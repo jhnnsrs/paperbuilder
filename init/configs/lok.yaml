@@ -1,19 +1,5 @@
 activation_days: 7
 apps:
-  - client_id: soinfosienfoisnseghsggegefoisneofinsef
-    client_secret: soinfosienesfseffoisnefoisneofinsef
-    client_type: public
-    grant_type: authorization-code
-    identifier: github.io.jhnnsrs.mikroj
-    name: MikroJ
-    redirect_uris:
-      - http://localhost:8090
-    scopes:
-      - read
-      - write
-    tenant: johannes
-    token: 293j40239j4023023n09nw30d9n203nf03f
-    version: latest
   - client_id: gdrgdhgnjsdfsefs
     client_secret: soinfosienesfseff3298zhiub9328ruoisnefoisneofinsef
     client_type: public
@@ -21,8 +7,7 @@ apps:
     identifier: github.io.jhnnsrs.arkitekt
     name: Arkitekt Test Client
     redirect_uris:
-      - http://localhost:5634
-      - http://localhost:5634/callback
+      - http://127.0.0.1/
     scopes:
       - read
       - write
@@ -36,19 +21,10 @@ apps:
     identifier: github.io.jhnnsrs.orkestrator
     name: orkestrator
     redirect_uris:
-      - http://localhost:8090
-      - http://localhost:6789/callback
-      - http://localhost:6789
-      - http://localhost:7890/callback
-      - http://localhost:7890
-      - http://100.91.169.37:7890/callback
-      - http://100.91.169.37:7890
-      - http://10.144.196.141:6789/callback
-      - http://10.144.196.141:6789
-      - http://100.91.169.37:6789
-      - http://100.91.169.37:6789/callback
-      - http://jhnnsrs-server:6789/callback
-      - http://jhnnsrs-server:6789/callback
+      - http://127.0.0.1/
+      - http://127.0.0.1/callback
+      - http://localhost:8010/callback
+      - http://localhost:8010/
     scopes:
       - read
       - write
@@ -62,30 +38,15 @@ apps:
     identifier: github.io.jhnnsrs.doks
     name: doks
     redirect_uris:
-      - http://localhost:3000
-      - http://localhost:3000/callback
-      - http://localhost:3000/doks/callback
+      - http://127.0.0.1/
+      - https://arkitekt.live
+      - https://arkitekt.live/callback
     scopes:
       - read
       - write
     tenant: johannes
     version: latest
     token: 293j40239j4023023n09nw3oinfinoifnsoifnosineoifnsef0d9n203nf03f
-  - client_id: mylittlefakts
-    client_secret: mylittlefaktssecret
-    client_type: public
-    grant_type: authorization-code
-    identifier: github.io.jhnnsrs.fakts
-    name: fakts
-    redirect_uris:
-      - http://localhost:3456
-      - http://localhost:3456/callback
-    scopes:
-      - read
-      - write
-    tenant: johannes
-    version: latest
-    token: 09j039j4r09n3409in09n09n0909209n409n09n3093n3
   - client_id: soinfosienfoaswdasdasdisnefoisneofinsef
     client_secret: soinfosiengeesegegfoisnefoisneofinsef
     client_type: public
@@ -93,7 +54,7 @@ apps:
     identifier: github.io.jhnnsrs.mikromanager
     name: MikroManager
     redirect_uris:
-      - http://localhost:8090
+      - http://127.0.0.1/
     scopes:
       - read
       - write
@@ -107,8 +68,7 @@ apps:
     identifier: github.io.jhnnsrs.mikro-napari
     name: napari
     redirect_uris:
-      - http://localhost:6767/
-      - http://localhost:6767
+      - http://127.0.0.1/
     scopes:
       - read
       - write
@@ -122,8 +82,8 @@ apps:
     identifier: github.io.jhnnsrs.mikroj
     name: mikroj
     redirect_uris:
-      - http://localhost:6767/
-      - http://localhost:6767
+      - http://127.0.0.1/
+      - http://127.0.0.1/
     scopes:
       - read
     tenant: johannes
@@ -136,32 +96,20 @@ apps:
     identifier: github.io.jhnnsrs.gucker
     name: gucker
     redirect_uris:
-      - http://localhost:6767/
-      - http://localhost:6767
+      - http://127.0.0.1/
     scopes:
       - read
     tenant: johannes
     version: latest
     token: 2039rn0293md02m3f0pm2p30omr02oin3f0ß92m30f9n2039fn2039fn
-  - client_id: 09j09sn09nf0s9ne0f9ns09enf0s9enfsef
-    client_secret: 09049n0ne0fsinme0n309n2039n4029340293m0293m0293f
-    client_type: private
-    grant_type: client-credentials
-    identifier: github.io.jhnnsrs.reaktor
-    name: gucker
-    scopes:
-      - read
-    tenant: johannes
-    version: latest
-    token: sf09js09e0f9se0f9ns0e9nfsef
 
 db:
   db_name: lok_db
   engine: django.db.backends.postgresql
   host: db
-  password: a649ca339098a6eeba4dcf39b835d47b
+  password: 0fb71231a356b6f89ee30955fb306916
   port: 5432
-  username: 
+  username: crabbymyrtlespaniel
 deployment:
   name: Default
 django:
@@ -171,49 +119,49 @@ django:
   debug: false
   hosts:
     - "*"
-  secret_key: e156a1205e1b6b29561d04a013972748
+  secret_key: 36d5a0ef71479974ccfc0468bbb8ff57
 groups: 
   - name: jo
     description: x
 minio:
-  access_key: 1c7fa60b68ba9e082a0001c251da273b
+  access_key: chewyfirebrickturtle
   buckets:
     media: lokmedia
   host: minio
   port: "9000"
   protocol: http
-  secret_key: d29b573f6f6c6fe870508505294f4141
+  secret_key: 0fb09f260615ae121d76e6ea5bb1b0b6
 private_key:  |
   -----BEGIN PRIVATE KEY-----
-  MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDUnnA1AQ846uES
-  3NzSBmBPAl2cFwDaxDQWrdS+SoX7sogTzinAv024qXUIl3P1MPCNRODhdLv84D85
-  xBnXYwhJsW6AWSrZhiM6t/SvJRn34gEH/RJrXB5p/iq0gQHJ5QGQwN4XaLq6VvTl
-  t7fLkCljv5KVYIZcFyjKK+bMefBqEnRbQDKUm/hefuLVoDgOMiRVu70O5FdmIMiy
-  bqppqY6IxibtbZ0eR1h+7Tr3/6uBI46692QmLn7zGdYpX8WkOu/BWWouR+LtLJcz
-  5FyerDymxtLOQhiu2LPaqosV+lUrJ74Ni1G0mocTWnN6ardpSqQXbZDQFMN04H8T
-  80qh1vrvAgMBAAECggEAEYBulsOyOmqF1xpRyFgOBXLvEbIzDSRUGqnPIVAxHI7i
-  9KkRIXSd3ogpwhNK0Ea/BmHtFkyYTNszWSXzRUTkTGyhPp9tujTNzD+S500+iKZp
-  6fvC+w4SKCzBMdU3YyR0BIkGacGNMq7bFIMS9ga1NtNw1YBPObVjqNYETECdXEhn
-  f7629IjtfqhvWTl56wrXRnxucKNIrWgRyismRyO1fiSVCn42EoepzekRJiPcYWhC
-  lDgd3YwX2lNbIbfxAc/6wBY3ipgcFz0kdbfjl4udwFgHJdPRKQFkh6ZW6/58IPLs
-  TexHMWny8ZBVGvyV8XAXB6QhMjRD7fEJs1OREcxgwQKBgQDzJJRp4pY/dxdlEcw1
-  7Kgokr+ZNKtkjwqgZJgD3lzF4Ai+at1LfwwieZcDFI2MA8aRh4QX+xUvgLOCyNTA
-  RWTRmgIdJ2+Vsy86CKuT0wPaMZGjmBjaXpVeU+GBw9v+8XypUqWBRnCEnkrEib1H
-  xqYjljGTfDlzjBgYqWU9vzRKTQKBgQDf3KfsOhBBdyF65vfsqDW4oUZQiQaFeQdD
-  Z6wcP6iP4RSSsXvrFelB55bM/uvdsIUq7JV+AuQoi885s2karFyLfDTl+xfDUtxJ
-  ayxyhNSM6l30uR7qL35LWnwqPPtnlrlB/jEeXWfvsEFaH8xlOdSRGE4sGgUIr7p/
-  Q9XYfoiAKwKBgQDv7/wplXnRfVNv4KVV3YmAKHi81nYAUQwahcphnvCMMG5QgqKI
-  2wH9j2GPn5ujPSKaAFJBW/xnGSmMeWVBq/k2wjUt0fnSj7WeHmo7AXR+wIXJG9IC
-  xG3AXSRfawlRR7tOWImMzhdBN/fuhUJtb0IKQjAALAmB1hD9XUTULziJzQKBgCor
-  DXKhCVjbkPHuufrZQK1Tq8QV26Wew7B9wdzcXOslUdPEHPyOdw7UCgL5bgKncp5A
-  THSdJM9CbrmGwyCkIRahQfGkV7iSTi6CQrAbt1IH/8TObjVc1uRo2gS20gCUUrdM
-  o4H9xEtRHy5T2ROkThc6xdbm29XkDDRW2dxbEWlbAoGABAB78fhIc8kNCCeLU5pL
-  /I8cpEL0IIroc2D98BzNgxqXLLkdvnaOLQE9sI+Nd3Ia5jNI6KBGifdEqUujfPhL
-  h9sQsNQ0sls5MsoSIl+u45JazhwKD7hAbEU3LIK3KD8CM44pJ0ZOvqSqT2zzbIB9
-  tN4Wx01d7gv4OYP/AJl6aXI=
+  MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDyKXkrPchIzpgt
+  pDmiWzWZFRVVAmb04hyluxTB3F+NFg5pKkoLrguKtT/v2dzgptpUEdCUfI5+kXAE
+  ElZevBJfIuqlI46D/zMJ+Ybwg/iebXE76DTwR6DtnQjP2jc2H9Or5BrUH2koA4Sx
+  pJbrLkS/YqkkQdu3Ocnbv2vSHITDR5ApFk8W7Qc1bu9AF0JzShWemMFUmPpVqhu4
+  QK4zftDyKVJjVpGxlHhlKhuC0eEp6ZUNR0KZWPci7gyhZEFM5+8DvET1GzUiRMgq
+  1wLIb0LKlcsXyBSU/3RJu1+mcVVRzFF1lB9pLop/ggfipggRIexK8q1u95wEXEZ7
+  1TlBzC+TAgMBAAECggEAX8pQB+7UfxhZ0hQYSETUGs3gNlRQ7aVTt6sdNuI5WdHT
+  uX3k9GHQZvnzZKlFWggmbQLvAw2SQDa/nJy0VZ0Hl2J0dwZtpYEZa2StIA7UFbct
+  B4l/B10OJ2/qwG2NUXedf20nv6j9K7rYjnyQxk7zGtGoHpN+mifd1XMO73ogei3b
+  qzzlyl2ahIJadbP5Lr2GRhBfAq/2Jdq5Nvq/m4D7Aro54a6TgA3ALlFQbE8k0zku
+  Rgyhzty+XrOAsePwtjP7ZQeLYEKR7A3P8vtYhfvVrh7ZNeTc2/ug1uXemasouUyv
+  eyeyVh3AroZxFrOBeuAhlASrTGYZ9BEJUmWNebg0oQKBgQD+9h1FJa8JH+LOrOFu
+  8XqKNVmaiFzeKuCnB0f/YfMkEMb1YaCgvasXCcrlZy2xQyOb+CumS5eURbaRyVZ5
+  1MDKEgAlGB6xNSwI136a/P37jfp3g8B3WR40yF1izquO1aaJc7Q2lqIdWvkaMkLr
+  73pqJLGJr7uAKucyNaUyd+bULQKBgQDzJgLdPExcoGGswqA1/lPmOdIKrttduCYr
+  9HAbBskxDPDLaQnT5O3DMqwNK3wzq4r8DXSlKCBK7rx7ioxkBsfk016pzKdU5Sjn
+  IkDygX6sD6aC+JOTRYNZJ8swyj8EVmk9XRakT7kxGZAAt33FSWo9QoOqHaBMGN1s
+  uG7VOSaqvwKBgQDMWxYw4zh9lsojH9x9IR44AvTz8NKG3FU+a46gurC4up3N9lda
+  H0wv5hBzeRTdnNPA4tSRsMso9AuWpIskkYuJK45kLQYEwXqvB5KZxagJZc5Y1wiA
+  YLTeV67KUJ6fmM2oJE5Q5sG/x7gb8CdFlqhGxWxr0Kf33et7ihYD8qjYbQKBgQCY
+  KYB/XP3YtZGKoN3MDFYK7MJSZyzm0Jgqx7TkZPHBXXzPfvNkhI56qppbP4xhdYfr
+  xqvps1vKKO8RTRogetHblJ9YGbfZ+/MF+jy0xm80VDL7IX6RGl5hi/KvnNGk8EK5
+  4SiLOU0Guh2RJUNzFEeFALwO2K15EdJ3+E975mEZVwKBgDyujUWPQaWR/YXhddJK
+  6vO7wrziqx1j70Ihc97YQrQ244f1hmONeQ4drU5P8QKpF9w2Hnzr5M/t8C83MGeB
+  y2ejps1jDHajY8L5iATiUz1yET2wecKetb4Tb1DA2sYkBQmoVp1F1SMaRoJHtbyj
+  Uq+2z9ffR/hVpS+WXizN4fSo
   -----END PRIVATE KEY-----
 
-public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUnnA1AQ846uES3NzSBmBPAl2cFwDaxDQWrdS+SoX7sogTzinAv024qXUIl3P1MPCNRODhdLv84D85xBnXYwhJsW6AWSrZhiM6t/SvJRn34gEH/RJrXB5p/iq0gQHJ5QGQwN4XaLq6VvTlt7fLkCljv5KVYIZcFyjKK+bMefBqEnRbQDKUm/hefuLVoDgOMiRVu70O5FdmIMiybqppqY6IxibtbZ0eR1h+7Tr3/6uBI46692QmLn7zGdYpX8WkOu/BWWouR+LtLJcz5FyerDymxtLOQhiu2LPaqosV+lUrJ74Ni1G0mocTWnN6ardpSqQXbZDQFMN04H8T80qh1vrv
+public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDyKXkrPchIzpgtpDmiWzWZFRVVAmb04hyluxTB3F+NFg5pKkoLrguKtT/v2dzgptpUEdCUfI5+kXAEElZevBJfIuqlI46D/zMJ+Ybwg/iebXE76DTwR6DtnQjP2jc2H9Or5BrUH2koA4SxpJbrLkS/YqkkQdu3Ocnbv2vSHITDR5ApFk8W7Qc1bu9AF0JzShWemMFUmPpVqhu4QK4zftDyKVJjVpGxlHhlKhuC0eEp6ZUNR0KZWPci7gyhZEFM5+8DvET1GzUiRMgq1wLIb0LKlcsXyBSU/3RJu1+mcVVRzFF1lB9pLop/ggfipggRIexK8q1u95wEXEZ71TlBzC+T
 redis:
   host: redis
   port: 6379

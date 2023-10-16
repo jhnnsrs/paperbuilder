@@ -1,10 +1,10 @@
 db:
-  db_name: fluss_db
+  db_name: mikro_db
   engine: django.db.backends.postgresql
   host: db
   password: {{postgres_password}}
   port: 5432
-  username: {{postgres_password}}
+  username: {{postgres_user}}
 django:
   admin:
     password: {{admin_password}}
@@ -12,21 +12,21 @@ django:
   debug: false
   hosts:
   - '*'
-  secret_key: {{services.fluss.secret_key}}
+  secret_key: {{services.mikro.django_secret_key}}
 lok:
   issuer: lok
   key_type: RS256
   public_key: {{public_key}}
 minio:
-  access_key: {{serc}}
+  access_key: {{services.mikro.access_key}}
   buckets:
     zarr: zarr
     parquet: parquet
-    mediam: mikromedia
+    media: mikromedia
   host: minio
   port: '9000'
   protocol: http
-  secret_key: {{minio_secret_key}}
+  secret_key: {{services.mikro.secret_key}}
 redis:
   host: redis
   port: 6379

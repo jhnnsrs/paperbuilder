@@ -1,19 +1,5 @@
 activation_days: 7
 apps:
-  - client_id: soinfosienfoisnseghsggegefoisneofinsef
-    client_secret: soinfosienesfseffoisnefoisneofinsef
-    client_type: public
-    grant_type: authorization-code
-    identifier: github.io.jhnnsrs.mikroj
-    name: MikroJ
-    redirect_uris:
-      - http://localhost:8090
-    scopes:
-      - read
-      - write
-    tenant: johannes
-    token: 293j40239j4023023n09nw30d9n203nf03f
-    version: latest
   - client_id: gdrgdhgnjsdfsefs
     client_secret: soinfosienesfseff3298zhiub9328ruoisnefoisneofinsef
     client_type: public
@@ -21,8 +7,7 @@ apps:
     identifier: github.io.jhnnsrs.arkitekt
     name: Arkitekt Test Client
     redirect_uris:
-      - http://localhost:5634
-      - http://localhost:5634/callback
+      - http://127.0.0.1/
     scopes:
       - read
       - write
@@ -36,19 +21,10 @@ apps:
     identifier: github.io.jhnnsrs.orkestrator
     name: orkestrator
     redirect_uris:
-      - http://localhost:8090
-      - http://localhost:6789/callback
-      - http://localhost:6789
-      - http://localhost:7890/callback
-      - http://localhost:7890
-      - http://100.91.169.37:7890/callback
-      - http://100.91.169.37:7890
-      - http://10.144.196.141:6789/callback
-      - http://10.144.196.141:6789
-      - http://100.91.169.37:6789
-      - http://100.91.169.37:6789/callback
-      - http://jhnnsrs-server:6789/callback
-      - http://jhnnsrs-server:6789/callback
+      - http://127.0.0.1/
+      - http://127.0.0.1/callback
+      - http://localhost:{{start_port + orkestrator_port_increment}}/callback
+      - http://localhost:{{start_port + orkestrator_port_increment}}/
     scopes:
       - read
       - write
@@ -62,30 +38,15 @@ apps:
     identifier: github.io.jhnnsrs.doks
     name: doks
     redirect_uris:
-      - http://localhost:3000
-      - http://localhost:3000/callback
-      - http://localhost:3000/doks/callback
+      - http://127.0.0.1/
+      - https://arkitekt.live
+      - https://arkitekt.live/callback
     scopes:
       - read
       - write
     tenant: johannes
     version: latest
     token: 293j40239j4023023n09nw3oinfinoifnsoifnosineoifnsef0d9n203nf03f
-  - client_id: mylittlefakts
-    client_secret: mylittlefaktssecret
-    client_type: public
-    grant_type: authorization-code
-    identifier: github.io.jhnnsrs.fakts
-    name: fakts
-    redirect_uris:
-      - http://localhost:3456
-      - http://localhost:3456/callback
-    scopes:
-      - read
-      - write
-    tenant: johannes
-    version: latest
-    token: 09j039j4r09n3409in09n09n0909209n409n09n3093n3
   - client_id: soinfosienfoaswdasdasdisnefoisneofinsef
     client_secret: soinfosiengeesegegfoisnefoisneofinsef
     client_type: public
@@ -93,7 +54,7 @@ apps:
     identifier: github.io.jhnnsrs.mikromanager
     name: MikroManager
     redirect_uris:
-      - http://localhost:8090
+      - http://127.0.0.1/
     scopes:
       - read
       - write
@@ -107,8 +68,7 @@ apps:
     identifier: github.io.jhnnsrs.mikro-napari
     name: napari
     redirect_uris:
-      - http://localhost:6767/
-      - http://localhost:6767
+      - http://127.0.0.1/
     scopes:
       - read
       - write
@@ -122,8 +82,8 @@ apps:
     identifier: github.io.jhnnsrs.mikroj
     name: mikroj
     redirect_uris:
-      - http://localhost:6767/
-      - http://localhost:6767
+      - http://127.0.0.1/
+      - http://127.0.0.1/
     scopes:
       - read
     tenant: johannes
@@ -136,24 +96,12 @@ apps:
     identifier: github.io.jhnnsrs.gucker
     name: gucker
     redirect_uris:
-      - http://localhost:6767/
-      - http://localhost:6767
+      - http://127.0.0.1/
     scopes:
       - read
     tenant: johannes
     version: latest
     token: 2039rn0293md02m3f0pm2p30omr02oin3f0ß92m30f9n2039fn2039fn
-  - client_id: 09j09sn09nf0s9ne0f9ns09enf0s9enfsef
-    client_secret: 09049n0ne0fsinme0n309n2039n4029340293m0293m0293f
-    client_type: private
-    grant_type: client-credentials
-    identifier: github.io.jhnnsrs.reaktor
-    name: gucker
-    scopes:
-      - read
-    tenant: johannes
-    version: latest
-    token: sf09js09e0f9se0f9ns0e9nfsef
 
 db:
   db_name: lok_db
@@ -161,7 +109,7 @@ db:
   host: db
   password: {{postgres_password}}
   port: 5432
-  username: {{postgres_username}}
+  username: {{postgres_user}}
 deployment:
   name: Default
 django:

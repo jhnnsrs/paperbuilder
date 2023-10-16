@@ -10,6 +10,8 @@ from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.backends import default_backend as crypto_default_backend
 import secrets
 from typing import List, Dict
+from pydantic.types import ConstrainedStr 
+import namegenerator
 
 key = rsa.generate_private_key(
     backend=crypto_default_backend(), public_exponent=65537, key_size=2048
@@ -47,7 +49,7 @@ class Service(pydantic.BaseModel):
     django_secret_key: str = pydantic.Field(
         default_factory=lambda: secrets.token_hex(16)
     )
-    access_key: str = pydantic.Field(default_factory=lambda: secrets.token_hex(16))
+    access_key: str = pydantic.Field(default_factory=lambda: namegenerator.gen(separator=""))
     secret_key: str = pydantic.Field(default_factory=lambda: secrets.token_hex(16))
 
 
@@ -55,13 +57,14 @@ default_services = {
     "lok": Service(),
     "fluss": Service(),
     "minio": Service(),
+    "mikro": Service(),
     "port": Service(),
     "rekuest": Service(),
 }
 
 
 class Setup(pydantic.BaseModel):
-    name: str
+    name: str = pydantic.Field(default="default")
     admin_password: str = pydantic.Field(alias="adminPassword")
     admin_username: str = pydantic.Field(alias="adminUsername")
     public_key: str = pydantic.Field(default=public_key)
@@ -71,8 +74,8 @@ class Setup(pydantic.BaseModel):
     postgres_password: str = pydantic.Field(
         default_factory=lambda: secrets.token_hex(16)
     )
-    postgres_user: str = pydantic.Field(default_factory=lambda: secrets.token_hex(16))
-    minio_root_user: str = pydantic.Field(default_factory=lambda: secrets.token_hex(16))
+    postgres_user: str = pydantic.Field(default_factory=lambda: namegenerator.gen(separator=""))
+    minio_root_user: str = pydantic.Field(default_factory=lambda: namegenerator.gen(separator=""))
     minio_root_password: str = pydantic.Field(
         default_factory=lambda: secrets.token_hex(16)
     )
@@ -81,6 +84,19 @@ class Setup(pydantic.BaseModel):
     services: Dict[str, Service] = pydantic.Field(
         default_factory=lambda: default_services
     )
+
+    rekuest_port_increment = 20
+    fluss_port_increment = 40
+    lok_port_increment = 0
+    minio_port_increment = 60
+    port_port_increment = 50
+    mikro_port_increment = 30
+    orkestrator_port_increment = 10
+
+
+    @pydantic.validator("name", pre=True)
+    def name_validator(cls, v):
+        return v.lower()
 
 
 def render_template(src_path, dest_path, variables, assert_valid_yaml=True):
