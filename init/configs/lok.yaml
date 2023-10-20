@@ -11,7 +11,7 @@ apps:
     scopes:
       - read
       - write
-    tenant: johannes
+    tenant: admin
     version: latest
     token: 293j40239j4023023n09nj09n49nin3w30d9n203nf03f
   - client_id: snfoinosinefsef
@@ -28,7 +28,7 @@ apps:
     scopes:
       - read
       - write
-    tenant: johannes
+    tenant: admin
     version: latest
     token: 293j40239j4023023n039j309n309n3093n09nw30d9n203nf03f
   - client_id: soinfosienfsfosefghsegfisnefoisneofinsef
@@ -38,13 +38,13 @@ apps:
     identifier: github.io.jhnnsrs.doks
     name: doks
     redirect_uris:
-      - http://127.0.0.1/
+      - http://127.0.0.1/callback
       - https://arkitekt.live
       - https://arkitekt.live/callback
     scopes:
       - read
       - write
-    tenant: johannes
+    tenant: admin
     version: latest
     token: 293j40239j4023023n09nw3oinfinoifnsoifnosineoifnsef0d9n203nf03f
   - client_id: soinfosienfoaswdasdasdisnefoisneofinsef
@@ -58,7 +58,7 @@ apps:
     scopes:
       - read
       - write
-    tenant: johannes
+    tenant: admin
     version: latest
     token: 304n03940p39m4f09o304fo9m0394mf039n4f039n4f093n4f
   - client_id: soinfosienfoissgsegsegtbsynefoisneofinsef
@@ -72,7 +72,7 @@ apps:
     scopes:
       - read
       - write
-    tenant: johannes
+    tenant: admin
     version: latest
     token: 093j4093n4f09m3094mf09m309mf09mf094n09enf09n23
   - client_id: sdfsfshrhsdbse4gsrgs4rgdrgsrdgedrg
@@ -86,7 +86,7 @@ apps:
       - http://127.0.0.1/
     scopes:
       - read
-    tenant: johannes
+    tenant: admin
     version: v0.0.1
     token: 0394mr039m4f093m40f90934nf09n309m2039d029n3f092n3f0293fn
   - client_id: fsefgsdfoina9oiwendaosinaswdaw
@@ -99,7 +99,7 @@ apps:
       - http://127.0.0.1/
     scopes:
       - read
-    tenant: johannes
+    tenant: admin
     version: latest
     token: 2039rn0293md02m3f0pm2p30omr02oin3f0ß92m30f9n2039fn2039fn
 
@@ -107,9 +107,9 @@ db:
   db_name: lok_db
   engine: django.db.backends.postgresql
   host: db
-  password: 0fb71231a356b6f89ee30955fb306916
+  password: 37237260f6da98b5fa30538b8be31a37
   port: 5432
-  username: crabbymyrtlespaniel
+  username: snoopylinenburmese
 deployment:
   name: Default
 django:
@@ -119,49 +119,49 @@ django:
   debug: false
   hosts:
     - "*"
-  secret_key: 36d5a0ef71479974ccfc0468bbb8ff57
+  secret_key: e0179e1e5c82e7c615bd4b727f73a457
 groups: 
   - name: jo
     description: x
 minio:
-  access_key: chewyfirebrickturtle
+  access_key: breezyivorytapir
   buckets:
     media: lokmedia
   host: minio
   port: "9000"
   protocol: http
-  secret_key: 0fb09f260615ae121d76e6ea5bb1b0b6
+  secret_key: 5df6730e9764e16072eb2bda9d35c87f
 private_key:  |
   -----BEGIN PRIVATE KEY-----
-  MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDyKXkrPchIzpgt
-  pDmiWzWZFRVVAmb04hyluxTB3F+NFg5pKkoLrguKtT/v2dzgptpUEdCUfI5+kXAE
-  ElZevBJfIuqlI46D/zMJ+Ybwg/iebXE76DTwR6DtnQjP2jc2H9Or5BrUH2koA4Sx
-  pJbrLkS/YqkkQdu3Ocnbv2vSHITDR5ApFk8W7Qc1bu9AF0JzShWemMFUmPpVqhu4
-  QK4zftDyKVJjVpGxlHhlKhuC0eEp6ZUNR0KZWPci7gyhZEFM5+8DvET1GzUiRMgq
-  1wLIb0LKlcsXyBSU/3RJu1+mcVVRzFF1lB9pLop/ggfipggRIexK8q1u95wEXEZ7
-  1TlBzC+TAgMBAAECggEAX8pQB+7UfxhZ0hQYSETUGs3gNlRQ7aVTt6sdNuI5WdHT
-  uX3k9GHQZvnzZKlFWggmbQLvAw2SQDa/nJy0VZ0Hl2J0dwZtpYEZa2StIA7UFbct
-  B4l/B10OJ2/qwG2NUXedf20nv6j9K7rYjnyQxk7zGtGoHpN+mifd1XMO73ogei3b
-  qzzlyl2ahIJadbP5Lr2GRhBfAq/2Jdq5Nvq/m4D7Aro54a6TgA3ALlFQbE8k0zku
-  Rgyhzty+XrOAsePwtjP7ZQeLYEKR7A3P8vtYhfvVrh7ZNeTc2/ug1uXemasouUyv
-  eyeyVh3AroZxFrOBeuAhlASrTGYZ9BEJUmWNebg0oQKBgQD+9h1FJa8JH+LOrOFu
-  8XqKNVmaiFzeKuCnB0f/YfMkEMb1YaCgvasXCcrlZy2xQyOb+CumS5eURbaRyVZ5
-  1MDKEgAlGB6xNSwI136a/P37jfp3g8B3WR40yF1izquO1aaJc7Q2lqIdWvkaMkLr
-  73pqJLGJr7uAKucyNaUyd+bULQKBgQDzJgLdPExcoGGswqA1/lPmOdIKrttduCYr
-  9HAbBskxDPDLaQnT5O3DMqwNK3wzq4r8DXSlKCBK7rx7ioxkBsfk016pzKdU5Sjn
-  IkDygX6sD6aC+JOTRYNZJ8swyj8EVmk9XRakT7kxGZAAt33FSWo9QoOqHaBMGN1s
-  uG7VOSaqvwKBgQDMWxYw4zh9lsojH9x9IR44AvTz8NKG3FU+a46gurC4up3N9lda
-  H0wv5hBzeRTdnNPA4tSRsMso9AuWpIskkYuJK45kLQYEwXqvB5KZxagJZc5Y1wiA
-  YLTeV67KUJ6fmM2oJE5Q5sG/x7gb8CdFlqhGxWxr0Kf33et7ihYD8qjYbQKBgQCY
-  KYB/XP3YtZGKoN3MDFYK7MJSZyzm0Jgqx7TkZPHBXXzPfvNkhI56qppbP4xhdYfr
-  xqvps1vKKO8RTRogetHblJ9YGbfZ+/MF+jy0xm80VDL7IX6RGl5hi/KvnNGk8EK5
-  4SiLOU0Guh2RJUNzFEeFALwO2K15EdJ3+E975mEZVwKBgDyujUWPQaWR/YXhddJK
-  6vO7wrziqx1j70Ihc97YQrQ244f1hmONeQ4drU5P8QKpF9w2Hnzr5M/t8C83MGeB
-  y2ejps1jDHajY8L5iATiUz1yET2wecKetb4Tb1DA2sYkBQmoVp1F1SMaRoJHtbyj
-  Uq+2z9ffR/hVpS+WXizN4fSo
+  MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCqY8POOEYyDQJB
+  MSsb3KNulEjXnel/NA7pMKjvFczOaA5XqxqU5ekfm48jOKRQZk1OI5ij+CRzJO4b
+  8L4wcUKcfV70y6wpN5TkR/2msqrcoB9VN8yqiK/Qye6M79YKJSEH84tVRfHnJifV
+  x46eycqH+g+3u1NXwBmWu+ms6Uc6oOJEtBhddRHPOVX/8OUGu7nbkSIZ/a00tM6L
+  DrpYMfB6/nfWYCKGboJwlz6A2PvCBwhYGvp6/HxJm4+Zgr78QQrQdMUpJAhLJKaU
+  G5OR+KmbmtLd1oH7+Tx/5JlWST8wHk93uWG66pkfSms4eeU2i7GPm0Ry1sBHTaAW
+  BHj+mL3VAgMBAAECggEAFELSuMXmSvNTDk97cc+1u2N0mfcUGeUl1MLNg8iS1wR2
+  mCQngAcqxnBn/+cvWsQfcyg2cWEDbJG6oqXo57fAFP2veepyKWCLmu2Ykubx/FQq
+  Bach9jFUvr4UWLv4NrKdj+V87wHnNvZJjFkzc1xJcgvhLJbg3TFhmZP0wHPo3Was
+  U6NP1jZo7iipGH4C3WFFxEGUe31SdzZPJlSZi/EvshaiYET73h0eAOtoJvWTvMg1
+  G13wIln39GtDdTs6PycpGTHyziYSQSPCw2FQz/ByIKNXhFY0XS2YY2RkC+h7Qkrx
+  EQes/3fJmvWaLrq9fENWc7Dp2YoocVDQC35I0lp/DQKBgQDgs+GCuiqcza1eoVfJ
+  7Vml1P5xE4jQ175PdeSs5X1LCERgeuc7tJat/fZZW6GvJ4wzcaM66sxDtx61LebY
+  BlstyYfXEs74JT8CTYYDuD8+RGp7C/5miO6foXpMpIpa2+CG4Od2cc2Vo1WaXrg3
+  K4I7Sju1tSSD1SU5kEYgE5puVwKBgQDCH0WkeATxGDoHsOJARcJKgaaKnw0W0Y4N
+  7SDbyz7CcheIwjcZPcF87yY7Gg5P+aXm0Uct9moG4+ppdz+LjzIIxYUGhkGaRnvV
+  xqnsLvYoIHIBTao5weH916fHxf8sggcTlivk8No6J6gKbP4mToysmptkeyRTITUA
+  xqTxpkLBswKBgQCST25KQdAXU7FMib/w4pRZ72tR04dlfOUVNk2U6sT/gz2KmNxR
+  uw/V8SRkIM8Rjq2ynY7MgTBJ80WScXX7OYBLOwsxVrTfTNlPNY1KhMDhWYj/39ph
+  h03hMTLCDu1rpfn3uR/dttJHWhgWMRDAE5tz4a0pbu58zN+1MKUIo9sNdwKBgFBG
+  2mf/chu55xWTIp1tu8FQCG0/BQywsEw2CeabEGMdB3p4xoxbq45c37SFO/H6zY68
+  cPEi/AnJawEeXVr7ZreV50MhdjO0fjWTqGWRrh49/KdpVMH52dk9u5az3KitRPvm
+  mFRe/gAasjVNiXSR+z7N2QEeo5D1JJQjkcaU+PpdAoGAOfVWu3nKjlXHgo5O2HZq
+  WDPIuV5jiqrMCqhYBaQMLwRvvVZc6Smv/iOCLu7zmLRc4vgVT6cGlgd3moFVOJyo
+  u1Ej56+t8Z8VO4oWfSqZjDkestUT9YZKLvYaOgTpTg+nYvISGXT7sF14amNRrWc4
+  OkBBO3mObSi0KUvQMwP00eo=
   -----END PRIVATE KEY-----
 
-public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDyKXkrPchIzpgtpDmiWzWZFRVVAmb04hyluxTB3F+NFg5pKkoLrguKtT/v2dzgptpUEdCUfI5+kXAEElZevBJfIuqlI46D/zMJ+Ybwg/iebXE76DTwR6DtnQjP2jc2H9Or5BrUH2koA4SxpJbrLkS/YqkkQdu3Ocnbv2vSHITDR5ApFk8W7Qc1bu9AF0JzShWemMFUmPpVqhu4QK4zftDyKVJjVpGxlHhlKhuC0eEp6ZUNR0KZWPci7gyhZEFM5+8DvET1GzUiRMgq1wLIb0LKlcsXyBSU/3RJu1+mcVVRzFF1lB9pLop/ggfipggRIexK8q1u95wEXEZ71TlBzC+T
+public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqY8POOEYyDQJBMSsb3KNulEjXnel/NA7pMKjvFczOaA5XqxqU5ekfm48jOKRQZk1OI5ij+CRzJO4b8L4wcUKcfV70y6wpN5TkR/2msqrcoB9VN8yqiK/Qye6M79YKJSEH84tVRfHnJifVx46eycqH+g+3u1NXwBmWu+ms6Uc6oOJEtBhddRHPOVX/8OUGu7nbkSIZ/a00tM6LDrpYMfB6/nfWYCKGboJwlz6A2PvCBwhYGvp6/HxJm4+Zgr78QQrQdMUpJAhLJKaUG5OR+KmbmtLd1oH7+Tx/5JlWST8wHk93uWG66pkfSms4eeU2i7GPm0Ry1sBHTaAWBHj+mL3V
 redis:
   host: redis
   port: 6379

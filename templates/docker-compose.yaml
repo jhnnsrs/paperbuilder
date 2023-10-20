@@ -15,6 +15,8 @@ services:
       - {{start_port + orkestrator_port_increment}}:80
     labels:
       - "arkitekt.{{name}}.service=orkestrator"
+      - "arkitekt.description=The interaction layer between the user and the system."
+      - "arkitekt.link=http://localhost:{{start_port + orkestrator_port_increment}}"
   fluss:
     depends_on:
     - redis
@@ -26,6 +28,8 @@ services:
     - ./configs/fluss.yaml:/workspace/config.yaml
     labels:
       - "arkitekt.{{name}}.service=fluss"
+      - "arkitekt.description=The savepoint for all of your workflows"
+      - "arkitekt.link=http://localhost:{{start_port + fluss_port_increment}}"
   initc:
     depends_on:
       minio:
@@ -50,6 +54,8 @@ services:
     - ./fakts:/workspace/fakts
     labels:
       - "arkitekt.{{name}}.service=lok"
+      - "arkitekt.description=The configuration and authorization endpoint for apps and users"
+      - "arkitekt.link=http://localhost:{{start_port + lok_port_increment}}"
   mikro:
     depends_on:
     - redis
@@ -63,6 +69,8 @@ services:
     - ./configs/mikro.yaml:/workspace/config.yaml
     labels:
       - "arkitekt.{{name}}.service=mikro"
+      - "arkitekt.description=Hosting your microscopy data and metadata"
+      - "arkitekt.link=http://localhost:{{start_port + mikro_port_increment}}"
   minio:
     command: server /data  --console-address ":9001"
     environment:
@@ -72,10 +80,10 @@ services:
     ports:
     - {{start_port + minio_port_increment}}:9000
     - {{start_port + minio_port_increment + 1}}:9001
-    volumes:
-    - ./data:/data
     labels:
       - "arkitekt.{{name}}.service=s3"
+      - "arkitekt.description=The binary storage for all your data"
+      - "arkitekt.link=http://localhost:{{start_port + + minio_port_increment + 1}}"
   port:
     depends_on:
     - lok
@@ -90,6 +98,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
       - "arkitekt.{{name}}.service=port"
+      - "arkitekt.description=Managing docker containers and their configuration"
+      - "arkitekt.link=http://localhost:{{start_port + + port_port_increment}}"
   portbridge:
     depends_on:
     - lok
@@ -101,16 +111,19 @@ services:
       - ./configs/port.yaml:/workspace/config.yaml
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
-      - "arkitekt.{{name}}.service=portbrdige"
+      - "arkitekt.{{name}}.service=portbridge"
+      - "arkitekt.description=A asynchronous worker for port"
   rabbitmq:
     command: rabbitmq-server
     image: jhnnsrs/mister:fancy
     labels:
       - "arkitekt.{{name}}.service=rabbitmq"
+      - "arkitekt.description=The backbone for task assignment"
   redis:
     image: redis:latest
     labels:
       - "arkitekt.{{name}}.service=redis"
+      - "arkitekt.description=A real-time communication layer between the services"
   rekuest:
     depends_on:
     - redis
@@ -122,5 +135,7 @@ services:
     volumes:
     - ./configs/rekuest.yaml:/workspace/config.yaml
     labels:
-    - "arkitekt.{{name}}.service=rekuest"
+      - "arkitekt.{{name}}.service=rekuest"
+      - "arkitekt.description=The repository for all of the functionality in your lab"
+      - "arkitekt.link=http://localhost:{{start_port + + rekuest_port_increment}}"
     

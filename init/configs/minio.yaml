@@ -12,33 +12,33 @@ buckets:
   - name: zarrnew
   - name: parquetnew
 users: 
-  - access_key: chewyfirebrickturtle
+  - access_key: breezyivorytapir
     name: lok
     policies:
       - readwrite
-    secret_key: 0fb09f260615ae121d76e6ea5bb1b0b6
-  - access_key: skankyeggplantspider
+    secret_key: 5df6730e9764e16072eb2bda9d35c87f
+  - access_key: shaggymauvegecko
     name: fluss
     policies:
       - readwrite
-    secret_key: c8b5e6191b3fe4e23b2d727deb2adc36
-  - access_key: tackycarmineshrew
+    secret_key: 4cba5aa4701998f339531f727052efba
+  - access_key: bumpyorchidcassowary
     name: minio
     policies:
       - readwrite
-    secret_key: d049b81ba8fdaf5e420dd2c2b1622db6
-  - access_key: paltryrussetwolverine
+    secret_key: e8d7b3fa01ab5ca40f21d95c5e03fdf5
+  - access_key: wheezybronzeladybird
     name: mikro
     policies:
       - readwrite
-    secret_key: e603c243b1e90ac1bcf8c57a1c28f52c
-  - access_key: squirrelykhakiabyssinian
+    secret_key: 8c6421f40e3a5013d57eaadf20fb6048
+  - access_key: squeakyazureslug
     name: port
     policies:
       - readwrite
-    secret_key: 8b5b2c79200d45340f449af4f3e8d256
-  - access_key: sunnycyanstingray
+    secret_key: 2dc733ebc4429521a228c1aa9caa3a52
+  - access_key: stealthyambertoucan
     name: rekuest
     policies:
       - readwrite
-    secret_key: 4c42cbc45019d4501a6d214eae2cdcf7
+    secret_key: c3e0fbbe172851e09e5eaf368b753aec

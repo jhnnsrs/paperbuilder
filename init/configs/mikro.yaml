@@ -2,9 +2,9 @@ db:
   db_name: mikro_db
   engine: django.db.backends.postgresql
   host: db
-  password: 0fb71231a356b6f89ee30955fb306916
+  password: 37237260f6da98b5fa30538b8be31a37
   port: 5432
-  username: crabbymyrtlespaniel
+  username: snoopylinenburmese
 django:
   admin:
     password: admin
@@ -12,13 +12,13 @@ django:
   debug: false
   hosts:
   - '*'
-  secret_key: 26a7906c9c1f565ce11aa3b4d77172f0
+  secret_key: f96d2304575214f1b8def2df23f052cf
 lok:
   issuer: lok
   key_type: RS256
-  public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDyKXkrPchIzpgtpDmiWzWZFRVVAmb04hyluxTB3F+NFg5pKkoLrguKtT/v2dzgptpUEdCUfI5+kXAEElZevBJfIuqlI46D/zMJ+Ybwg/iebXE76DTwR6DtnQjP2jc2H9Or5BrUH2koA4SxpJbrLkS/YqkkQdu3Ocnbv2vSHITDR5ApFk8W7Qc1bu9AF0JzShWemMFUmPpVqhu4QK4zftDyKVJjVpGxlHhlKhuC0eEp6ZUNR0KZWPci7gyhZEFM5+8DvET1GzUiRMgq1wLIb0LKlcsXyBSU/3RJu1+mcVVRzFF1lB9pLop/ggfipggRIexK8q1u95wEXEZ71TlBzC+T
+  public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqY8POOEYyDQJBMSsb3KNulEjXnel/NA7pMKjvFczOaA5XqxqU5ekfm48jOKRQZk1OI5ij+CRzJO4b8L4wcUKcfV70y6wpN5TkR/2msqrcoB9VN8yqiK/Qye6M79YKJSEH84tVRfHnJifVx46eycqH+g+3u1NXwBmWu+ms6Uc6oOJEtBhddRHPOVX/8OUGu7nbkSIZ/a00tM6LDrpYMfB6/nfWYCKGboJwlz6A2PvCBwhYGvp6/HxJm4+Zgr78QQrQdMUpJAhLJKaUG5OR+KmbmtLd1oH7+Tx/5JlWST8wHk93uWG66pkfSms4eeU2i7GPm0Ry1sBHTaAWBHj+mL3V
 minio:
-  access_key: paltryrussetwolverine
+  access_key: wheezybronzeladybird
   buckets:
     zarr: zarr
     parquet: parquet
@@ -26,7 +26,7 @@ minio:
   host: minio
   port: '9000'
   protocol: http
-  secret_key: e603c243b1e90ac1bcf8c57a1c28f52c
+  secret_key: 8c6421f40e3a5013d57eaadf20fb6048
 redis:
   host: redis
   port: 6379

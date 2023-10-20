@@ -4,8 +4,8 @@ services:
   db:
     environment:
       POSTGRES_MULTIPLE_DATABASES: port_db, mikro_db, lok_db, rekuest_db, fluss_db, mikronew_db
-      POSTGRES_PASSWORD: 0fb71231a356b6f89ee30955fb306916
-      POSTGRES_USER: crabbymyrtlespaniel
+      POSTGRES_PASSWORD: 37237260f6da98b5fa30538b8be31a37
+      POSTGRES_USER: snoopylinenburmese
     image: jhnnsrs/daten:prod
     labels:
       - "arkitekt.sss.service=db"
@@ -15,6 +15,8 @@ services:
       - 8010:80
     labels:
       - "arkitekt.sss.service=orkestrator"
+      - "arkitekt.description=The interaction layer between the user and the system."
+      - "arkitekt.link=http://localhost:8010"
   fluss:
     depends_on:
     - redis
@@ -26,14 +28,16 @@ services:
     - ./configs/fluss.yaml:/workspace/config.yaml
     labels:
       - "arkitekt.sss.service=fluss"
+      - "arkitekt.description=The savepoint for all of your workflows"
+      - "arkitekt.link=http://localhost:8040"
   initc:
     depends_on:
       minio:
         condition: service_started
     environment:
       MINIO_HOST: http://minio:9000
-      MINIO_ROOT_PASSWORD: 200e759923090cecdc49bc3abf6d7d3f
-      MINIO_ROOT_USER: shakypersimmoniguana
+      MINIO_ROOT_PASSWORD: 399f9dac81022e337fe5b1ab963dd080
+      MINIO_ROOT_USER: frumpyxanthicindri
     image: jhnnsrs/init:paper
     volumes:
     - ./configs/minio.yaml:/workspace/config.yaml
@@ -50,6 +54,8 @@ services:
     - ./fakts:/workspace/fakts
     labels:
       - "arkitekt.sss.service=lok"
+      - "arkitekt.description=The configuration and authorization endpoint for apps and users"
+      - "arkitekt.link=http://localhost:8000"
   mikro:
     depends_on:
     - redis
@@ -63,11 +69,13 @@ services:
     - ./configs/mikro.yaml:/workspace/config.yaml
     labels:
       - "arkitekt.sss.service=mikro"
+      - "arkitekt.description=Hosting your microscopy data and metadata"
+      - "arkitekt.link=http://localhost:8030"
   minio:
     command: server /data  --console-address ":9001"
     environment:
-      MINIO_ROOT_PASSWORD: 200e759923090cecdc49bc3abf6d7d3f
-      MINIO_ROOT_USER: shakypersimmoniguana
+      MINIO_ROOT_PASSWORD: 399f9dac81022e337fe5b1ab963dd080
+      MINIO_ROOT_USER: frumpyxanthicindri
     image: minio/minio:RELEASE.2023-02-10T18-48-39Z
     ports:
     - 8060:9000
@@ -76,6 +84,8 @@ services:
     - ./data:/data
     labels:
       - "arkitekt.sss.service=s3"
+      - "arkitekt.description=The binary storage for all your data"
+      - "arkitekt.link=http://localhost:8061"
   port:
     depends_on:
     - lok
@@ -90,6 +100,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
       - "arkitekt.sss.service=port"
+      - "arkitekt.description=Managing docker containers and their configuration"
+      - "arkitekt.link=http://localhost:8050"
   portbridge:
     depends_on:
     - lok
@@ -101,16 +113,19 @@ services:
       - ./configs/port.yaml:/workspace/config.yaml
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
-      - "arkitekt.sss.service=portbrdige"
+      - "arkitekt.sss.service=portbridge"
+      - "arkitekt.description=A asynchronous worker for port"
   rabbitmq:
     command: rabbitmq-server
     image: jhnnsrs/mister:fancy
     labels:
       - "arkitekt.sss.service=rabbitmq"
+      - "arkitekt.description=The backbone for task assignment"
   redis:
     image: redis:latest
     labels:
       - "arkitekt.sss.service=redis"
+      - "arkitekt.description=A real-time communication layer between the services"
   rekuest:
     depends_on:
     - redis
@@ -122,5 +137,7 @@ services:
     volumes:
     - ./configs/rekuest.yaml:/workspace/config.yaml
     labels:
-    - "arkitekt.sss.service=rekuest"
+      - "arkitekt.sss.service=rekuest"
+      - "arkitekt.description=The repository for all of the functionality in your lab"
+      - "arkitekt.link=http://localhost:8020"
     
