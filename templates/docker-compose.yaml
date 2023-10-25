@@ -30,6 +30,7 @@ services:
       - "arkitekt.{{name}}.service=fluss"
       - "arkitekt.description=The savepoint for all of your workflows"
       - "arkitekt.link=http://localhost:{{start_port + fluss_port_increment}}"
+      - "arkitekt.healthz=http://localhost:{{start_port + fluss_port_increment}}/ht"
   initc:
     depends_on:
       minio:
@@ -56,6 +57,7 @@ services:
       - "arkitekt.{{name}}.service=lok"
       - "arkitekt.description=The configuration and authorization endpoint for apps and users"
       - "arkitekt.link=http://localhost:{{start_port + lok_port_increment}}"
+      - "arkitekt.healthz=http://localhost:{{start_port + lok_port_increment}}/ht"
   mikro:
     depends_on:
     - redis
@@ -71,6 +73,7 @@ services:
       - "arkitekt.{{name}}.service=mikro"
       - "arkitekt.description=Hosting your microscopy data and metadata"
       - "arkitekt.link=http://localhost:{{start_port + mikro_port_increment}}"
+      - "arkitekt.healthz=http://localhost:{{start_port + lok_port_increment}}/ht"
   minio:
     command: server /data  --console-address ":9001"
     environment:
@@ -100,6 +103,7 @@ services:
       - "arkitekt.{{name}}.service=port"
       - "arkitekt.description=Managing docker containers and their configuration"
       - "arkitekt.link=http://localhost:{{start_port + + port_port_increment}}"
+      - "arkitekt.healthz=http://localhost:{{start_port + port_port_increment}}/ht"
   portbridge:
     depends_on:
     - lok
@@ -138,4 +142,5 @@ services:
       - "arkitekt.{{name}}.service=rekuest"
       - "arkitekt.description=The repository for all of the functionality in your lab"
       - "arkitekt.link=http://localhost:{{start_port + + rekuest_port_increment}}"
+      - "arkitekt.healthz=http://localhost:{{start_port + rekuest_port_increment}}/ht"
     

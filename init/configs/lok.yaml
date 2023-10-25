@@ -39,6 +39,7 @@ apps:
     name: doks
     redirect_uris:
       - http://127.0.0.1/callback
+      - http://127.0.0.1/
       - https://arkitekt.live
       - https://arkitekt.live/callback
     scopes:
