@@ -30,7 +30,7 @@ apps:
       - write
     tenant: admin
     version: latest
-    token: 293j40239j4023023n039j309n309n3093n09nw30d9n203nf03f
+    token: 3sdifnsodifnsoeifnsoein3023nnkfsjenfoisnf0222
   - client_id: soinfosienfsfosefghsegfisnefoisneofinsef
     client_secret: soinfoefsefssdfienfoisnefoisneofinsef
     client_type: public
@@ -83,7 +83,6 @@ apps:
     identifier: github.io.jhnnsrs.mikroj
     name: mikroj
     redirect_uris:
-      - http://127.0.0.1/
       - http://127.0.0.1/
     scopes:
       - read
