@@ -73,7 +73,7 @@ services:
       - "arkitekt.{{name}}.service=mikro"
       - "arkitekt.description=Hosting your microscopy data and metadata"
       - "arkitekt.link=http://localhost:{{start_port + mikro_port_increment}}"
-      - "arkitekt.healthz=http://localhost:{{start_port + lok_port_increment}}/ht"
+      - "arkitekt.healthz=http://localhost:{{start_port + mikro_port_increment}}/ht"
   minio:
     command: server /data  --console-address ":9001"
     environment:

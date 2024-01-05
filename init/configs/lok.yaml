@@ -11,6 +11,7 @@ apps:
     scopes:
       - read
       - write
+      - openid
     tenant: admin
     version: latest
     token: 293j40239j4023023n09nj09n49nin3w30d9n203nf03f
@@ -28,6 +29,7 @@ apps:
     scopes:
       - read
       - write
+      - openid
     tenant: admin
     version: latest
     token: 3sdifnsodifnsoeifnsoein3023nnkfsjenfoisnf0222
@@ -45,6 +47,7 @@ apps:
     scopes:
       - read
       - write
+      - openid
     tenant: admin
     version: latest
     token: 293j40239j4023023n09nw3oinfinoifnsoifnosineoifnsef0d9n203nf03f
@@ -59,6 +62,7 @@ apps:
     scopes:
       - read
       - write
+      - openid
     tenant: admin
     version: latest
     token: 304n03940p39m4f09o304fo9m0394mf039n4f039n4f093n4f
@@ -73,6 +77,7 @@ apps:
     scopes:
       - read
       - write
+      - openid
     tenant: admin
     version: latest
     token: 093j4093n4f09m3094mf09m309mf09mf094n09enf09n23
@@ -86,6 +91,8 @@ apps:
       - http://127.0.0.1/
     scopes:
       - read
+      - write
+      - openid
     tenant: admin
     version: v0.0.1
     token: 0394mr039m4f093m40f90934nf09n309m2039d029n3f092n3f0293fn
@@ -99,6 +106,8 @@ apps:
       - http://127.0.0.1/
     scopes:
       - read
+      - write
+      - openid
     tenant: admin
     version: latest
     token: 2039rn0293md02m3f0pm2p30omr02oin3f0ß92m30f9n2039fn2039fn
