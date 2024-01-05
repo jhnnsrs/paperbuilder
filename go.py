@@ -142,6 +142,7 @@ def main(variables):
 
 
 if __name__ == "__main__":
+
     try:
         setup_yaml = yaml.load(open("init/setup.yaml", "r"), yaml.FullLoader)
     except FileNotFoundError:
@@ -153,6 +154,9 @@ if __name__ == "__main__":
         raise e
 
     setup = Setup(**setup_yaml)
+    
+
+
     print(setup.json(indent=2))
 
     main(setup.dict())
