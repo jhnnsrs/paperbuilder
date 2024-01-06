@@ -9,7 +9,7 @@ The intended usage of this builder, is inside a Konstruktor deployment,workflow,
 ## Dev Usage
 
 ```python
-docker run -rm -v PATH_TO_SETUP_DIR_WITH_SETUP_YAML:/app/init python go.py
+docker run -rm -v PATH_TO_SETUP_DIR_WITH_SETUP_YAML:/app/init .
 ```
 
 
